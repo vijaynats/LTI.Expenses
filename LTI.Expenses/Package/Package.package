@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="7c1f9f8f-83be-4dc0-ae32-19f584de2ca0" 
+        solutionId="7c1f9f8f-83be-4dc0-ae32-19f584de2ca0" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="LTI.Expenses"
+        sharePointProductVersion="16.0">
+</package>
