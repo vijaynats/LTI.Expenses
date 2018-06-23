@@ -3,17 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E0737B86-06FE-42C6-BF1F-53156822DA30}</ProjectGuid>
+    <ProjectGuid>{FF30DC79-B2FB-47A4-9F38-DC56E7D5E151}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LTI.Expenses</RootNamespace>
     <AssemblyName>LTI.Expenses</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <TargetOfficeVersion>16.0</TargetOfficeVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
-    <MinimumOfficeToolsVersion>14.0</MinimumOfficeToolsVersion>
     <SandboxedSolution>False</SandboxedSolution>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -57,7 +55,7 @@
   <ItemGroup>
     <None Include="key.snk" />
     <None Include="Package\Package.package">
-      <PackageId>{7c1f9f8f-83be-4dc0-ae32-19f584de2ca0}</PackageId>
+      <PackageId>{87433c02-5631-4418-a675-4b91d523faa4}</PackageId>
     </None>
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
