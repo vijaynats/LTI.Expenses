@@ -53,6 +53,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\LTIExpensesPages\LTIExpensesPages.feature">
+      <FeatureId>{4a097e0a-19d3-44b8-a032-d647d2023eda}</FeatureId>
+    </None>
     <None Include="key.snk" />
     <None Include="Package\Package.package">
       <PackageId>{87433c02-5631-4418-a675-4b91d523faa4}</PackageId>
@@ -60,9 +63,17 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dee90775-94e5-4ccc-9dfc-26b4e19f1f92}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Features\" />
+    <Content Include="Features\LTIExpensesPages\LTIExpensesPages.Template.xml">
+      <DependentUpon>LTIExpensesPages.feature</DependentUpon>
+    </Content>
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Sample.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
