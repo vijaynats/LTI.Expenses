@@ -53,8 +53,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Features\LTIExpensesPages\LTIExpensesPages.feature">
-      <FeatureId>{4a097e0a-19d3-44b8-a032-d647d2023eda}</FeatureId>
+    <None Include="ExpenseDetailsList\ExpenseDetailsListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f3222e62-0cf1-40dc-9af9-e228ab28edf0}</SharePointProjectItemId>
+    </None>
+    <None Include="ExpenseDetailsList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a434c535-d0c1-4308-a2be-642db828502c}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\TripsList\TripsList.feature">
+      <FeatureId>{fa9e87ab-bf9a-40c5-9bbc-3989f50f3d4c}</FeatureId>
+    </None>
+    <None Include="Features\ExpenseDetailsList\ExpenseDetailsList.feature">
+      <FeatureId>{19849f0d-fa8e-49e5-a25b-3471066dc20c}</FeatureId>
     </None>
     <None Include="key.snk" />
     <None Include="Package\Package.package">
@@ -63,17 +72,27 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="Pages\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{dee90775-94e5-4ccc-9dfc-26b4e19f1f92}</SharePointProjectItemId>
+    <None Include="TripsList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e17eef98-afa9-4366-abfa-8eb1dbb0378f}</SharePointProjectItemId>
+    </None>
+    <None Include="TripsList\TripsListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{398c2d15-ca5f-45aa-8932-73b510980661}</SharePointProjectItemId>
     </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Features\LTIExpensesPages\LTIExpensesPages.Template.xml">
-      <DependentUpon>LTIExpensesPages.feature</DependentUpon>
+    <Content Include="ExpenseDetailsList\Elements.xml" />
+    <Content Include="ExpenseDetailsList\ExpenseDetailsListInstance\Elements.xml" />
+    <Content Include="ExpenseDetailsList\Schema.xml" />
+    <Content Include="Features\TripsList\TripsList.Template.xml">
+      <DependentUpon>TripsList.feature</DependentUpon>
     </Content>
-    <Content Include="Pages\Elements.xml" />
-    <Content Include="Pages\Sample.txt" />
+    <Content Include="Features\ExpenseDetailsList\ExpenseDetailsList.Template.xml">
+      <DependentUpon>ExpenseDetailsList.feature</DependentUpon>
+    </Content>
+    <Content Include="TripsList\Elements.xml" />
+    <Content Include="TripsList\Schema.xml" />
+    <Content Include="TripsList\TripsListInstance\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
