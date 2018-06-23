@@ -53,6 +53,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{fa9e87ab-bf9a-40c5-9bbc-3989f50f3d4c}</FeatureId>
+    </None>
     <None Include="key.snk" />
     <None Include="Package\Package.package">
       <PackageId>{87433c02-5631-4418-a675-4b91d523faa4}</PackageId>
@@ -60,9 +63,21 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
+    <None Include="TripsList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e17eef98-afa9-4366-abfa-8eb1dbb0378f}</SharePointProjectItemId>
+    </None>
+    <None Include="TripsList\TripsListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{398c2d15-ca5f-45aa-8932-73b510980661}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Features\" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="TripsList\Elements.xml" />
+    <Content Include="TripsList\Schema.xml" />
+    <Content Include="TripsList\TripsListInstance\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
