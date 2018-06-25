@@ -60,9 +60,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ApprovalStatus\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{bb84324d-059d-44d1-a529-133824faa4ee}</SharePointProjectItemId>
-    </None>
     <None Include="Expenses\ExpensesListInstance\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{f3222e62-0cf1-40dc-9af9-e228ab28edf0}</SharePointProjectItemId>
     </None>
@@ -90,7 +87,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApprovalStatus\Elements.xml" />
     <Content Include="Expenses\Elements.xml" />
     <Content Include="Expenses\ExpensesListInstance\Elements.xml" />
     <Content Include="Expenses\Schema.xml" />
@@ -103,12 +99,6 @@
     <Content Include="Trips\Elements.xml" />
     <Content Include="Trips\Schema.xml" />
     <Content Include="Trips\TripsListInstance\Elements.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <XamlAppDef Include="ApprovalStatus\Workflow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </XamlAppDef>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
