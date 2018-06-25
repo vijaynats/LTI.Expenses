@@ -59,11 +59,8 @@
     <None Include="ExpenseDetailsList\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a434c535-d0c1-4308-a2be-642db828502c}</SharePointProjectItemId>
     </None>
-    <None Include="Features\TripsList\TripsList.feature">
-      <FeatureId>{fa9e87ab-bf9a-40c5-9bbc-3989f50f3d4c}</FeatureId>
-    </None>
-    <None Include="Features\ExpenseDetailsList\ExpenseDetailsList.feature">
-      <FeatureId>{19849f0d-fa8e-49e5-a25b-3471066dc20c}</FeatureId>
+    <None Include="Features\LTIExpensesLists\LTIExpensesLists.feature">
+      <FeatureId>{eab3dd05-60c4-4cad-89e3-30989efcd3b5}</FeatureId>
     </None>
     <None Include="key.snk" />
     <None Include="Package\Package.package">
@@ -84,11 +81,8 @@
     <Content Include="ExpenseDetailsList\Elements.xml" />
     <Content Include="ExpenseDetailsList\ExpenseDetailsListInstance\Elements.xml" />
     <Content Include="ExpenseDetailsList\Schema.xml" />
-    <Content Include="Features\TripsList\TripsList.Template.xml">
-      <DependentUpon>TripsList.feature</DependentUpon>
-    </Content>
-    <Content Include="Features\ExpenseDetailsList\ExpenseDetailsList.Template.xml">
-      <DependentUpon>ExpenseDetailsList.feature</DependentUpon>
+    <Content Include="Features\LTIExpensesLists\LTIExpensesLists.Template.xml">
+      <DependentUpon>LTIExpensesLists.feature</DependentUpon>
     </Content>
     <Content Include="TripsList\Elements.xml" />
     <Content Include="TripsList\Schema.xml" />
