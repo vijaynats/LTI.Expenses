@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="ExpensesWorkflow" Url="wfsvc/6cd551d3d537483dbf868bdee9db060a">
+    <File Url="Workflow.xaml" Type="GhostableInLibrary" Path="ExpensesWorkflow\Workflow.xaml" DoGUIDFixUp="TRUE" ReplaceContent="TRUE">
+      <Property Name="ContentType" Value="WorkflowServiceDefinition" />
+      <Property Name="isReusable" Value="true" />
+      <Property Name="RequiresInitiationForm" Value="False" />
+      <Property Name="RequiresAssociationForm" Value="False" />
+      <Property Name="WSPublishState" Value="3" />
+      <Property Name="WSDisplayName" Value="ExpensesWorkflow" />
+      <Property Name="WSDescription" Value="My 'ExpensesWorkflow' Workflow" />
+      <!-- If you change the name or Url of your custom initiation or association form, 
+           remember to update the corresponding property value (InitiationUrl or AssociationUrl) to match the new web relative url.
+      -->
+      <Property Name="RestrictToType" Value="List" />
+      <Property Name="RestrictToScope" Value="{$ListId:Lists/Trips;}" />
+    </File>
+    <File Url="WorkflowStartAssociation" Path="ExpensesWorkflow\WorkflowStartAssociation" Type="GhostableInLibrary">
+      <Property Name="WSDisplayName" Value="ExpensesWorkflow - Workflow Start" />
+      <Property Name="ContentType" Value="WorkflowServiceSubscription" />
+      <Property Name="WSPublishState" Value="3" />
+      <Property Name="WSEventType" Value="WorkflowStart" />
+      <Property Name="WSEnabled" Value="true" />
+      <Property Name="WSGUID" Value="eaf0537d-f3fd-43cc-87eb-b2e114086a90" />
+      <Property Name="WSEventSourceGUID" Value="{$ListId:Lists/Trips;}" />
+      <Property Name="Microsoft.SharePoint.ActivationProperties.ListId" Value="{$ListId:Lists/Trips;}" />
+      <Property Name="HistoryListId" Value="{$ListId:Lists/WorkflowHistoryList_1;}" />
+      <Property Name="TaskListId" Value="{$ListId:Lists/WorkflowTaskList_1;}" />
+    </File>
+    <File Url="ItemAddedAssociation" Path="ExpensesWorkflow\ItemAddedAssociation" Type="GhostableInLibrary">
+      <Property Name="WSDisplayName" Value="ExpensesWorkflow - Item Added" />
+      <Property Name="ContentType" Value="WorkflowServiceSubscription" />
+      <Property Name="WSPublishState" Value="3" />
+      <Property Name="WSEventType" Value="ItemAdded" />
+      <Property Name="WSEnabled" Value="true" />
+      <Property Name="WSGUID" Value="2e3d9c86-c264-4fc0-9039-7af97be01fb1" />
+      <Property Name="WSEventSourceGUID" Value="{$ListId:Lists/Trips;}" />
+      <Property Name="Microsoft.SharePoint.ActivationProperties.ListId" Value="{$ListId:Lists/Trips;}" />
+      <Property Name="HistoryListId" Value="{$ListId:Lists/WorkflowHistoryList_1;}" />
+      <Property Name="TaskListId" Value="{$ListId:Lists/WorkflowTaskList_1;}" />
+    </File>
+  </Module>
+  <ListInstance FeatureId="{2c63df2b-ceab-42c6-aeff-b3968162d4b1}"
+                TemplateType="4501"
+                Title="wfsvc"
+                Description="This list instance is used by SharePoint to keep track of workflows. Do not modify."
+                Url="wfsvc"
+                RootWebOnly="FALSE" />
+</Elements>

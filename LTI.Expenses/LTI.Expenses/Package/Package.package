@@ -2,6 +2,6 @@
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="87433c02-5631-4418-a675-4b91d523faa4" solutionId="87433c02-5631-4418-a675-4b91d523faa4" resetWebServer="false" sharePointProductVersion="15.0" name="LTI.Expenses" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
   <features>
     <featureReference itemId="19849f0d-fa8e-49e5-a25b-3471066dc20c" />
-    <featureReference itemId="aa2f0251-7e9d-4957-ad3e-859862ff7d29" />
+    <featureReference itemId="9f54f398-55f3-4961-8cfc-548d695d67c2" />
   </features>
 </package>
