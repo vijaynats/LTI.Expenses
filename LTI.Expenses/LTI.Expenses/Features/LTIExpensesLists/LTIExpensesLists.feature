@@ -3,5 +3,7 @@
   <projectItems>
     <projectItemReference itemId="e17eef98-afa9-4366-abfa-8eb1dbb0378f" />
     <projectItemReference itemId="398c2d15-ca5f-45aa-8932-73b510980661" />
+    <projectItemReference itemId="f3222e62-0cf1-40dc-9af9-e228ab28edf0" />
+    <projectItemReference itemId="a434c535-d0c1-4308-a2be-642db828502c" />
   </projectItems>
 </feature>

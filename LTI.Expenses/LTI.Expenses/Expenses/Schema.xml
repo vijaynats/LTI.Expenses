@@ -34,7 +34,7 @@
           
           
           
-        <CHOICE>Travel Ticket</CHOICE><CHOICE>Local Travel</CHOICE><CHOICE>Food and Snacks</CHOICE><CHOICE>Stationery</CHOICE><CHOICE>Internet and Mobile</CHOICE><CHOICE>Others</CHOICE></CHOICES>
+        <CHOICE>Travel</CHOICE><CHOICE>Local Travel</CHOICE><CHOICE>Food and Snacks</CHOICE><CHOICE>Stationery</CHOICE><CHOICE>Internet and Mobile</CHOICE><CHOICE>Others</CHOICE></CHOICES>
       </Field><Field Name="Narration" ID="{a876967e-279f-40ac-96df-6f4766445589}" DisplayName="Narration" Type="Note" Required="TRUE" /><Field Name="Amount" ID="{5e8678d1-d11d-4158-8527-e4160d25e410}" DisplayName="Amount" Type="Currency" Required="TRUE" /><Field Name="BillScan" ID="{294f76f5-982b-4ade-b642-53e005101e72}" DisplayName="BillScan" Type="URL" Required="TRUE" /><Field Name="TripRef" ID="{34837993-8a7a-43a4-93d4-580053335170}" DisplayName="TripRef" Type="Lookup" Required="TRUE" List="Trips" ShowField="TripName" /></Fields>
     <Views>
       

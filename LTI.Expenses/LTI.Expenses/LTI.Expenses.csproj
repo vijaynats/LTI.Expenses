@@ -66,9 +66,6 @@
     <None Include="Expenses\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a434c535-d0c1-4308-a2be-642db828502c}</SharePointProjectItemId>
     </None>
-    <None Include="Features\Feature1\Feature1.feature">
-      <FeatureId>{aa2f0251-7e9d-4957-ad3e-859862ff7d29}</FeatureId>
-    </None>
     <None Include="Features\LTIExpensesLists\LTIExpensesLists.feature">
       <FeatureId>{19849f0d-fa8e-49e5-a25b-3471066dc20c}</FeatureId>
     </None>
@@ -90,9 +87,6 @@
     <Content Include="Expenses\Elements.xml" />
     <Content Include="Expenses\ExpensesListInstance\Elements.xml" />
     <Content Include="Expenses\Schema.xml" />
-    <Content Include="Features\Feature1\Feature1.Template.xml">
-      <DependentUpon>Feature1.feature</DependentUpon>
-    </Content>
     <Content Include="Features\LTIExpensesLists\LTIExpensesLists.Template.xml">
       <DependentUpon>LTIExpensesLists.feature</DependentUpon>
     </Content>
@@ -100,6 +94,7 @@
     <Content Include="Trips\Schema.xml" />
     <Content Include="Trips\TripsListInstance\Elements.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
