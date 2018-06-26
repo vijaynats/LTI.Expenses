@@ -1,4 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <ListInstance Title="Trips" OnQuickLaunch="TRUE" TemplateType="10001" Url="Lists/Trips" Description="Trips"></ListInstance>
+  <ListInstance Title="Trips" OnQuickLaunch="TRUE"
+                TemplateType="10001" Url="Lists/Trips" Description="Trips">
+    
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">LTI Meeting on Resource Management</Field>
+          <Field Name="EmployeeName">pranav</Field>
+          <Field Name="TripStart">2018-06-25</Field>
+          <Field Name="TripEnd">2018-06-29</Field>
+          <Field Name="TripType">General Meeting</Field>
+          <Field Name="TripDetails">Meeting</Field>
+          <Field Name="EstimatedBudget">45000</Field>
+          <Field Name="ApprovingManager">pravveen</Field>
+          <Field Name="TotalExpenses">42000</Field>
+          <Field Name="Notes">Meeting</Field>
+          <Field Name="TripStatus">Planned</Field>
+        </Row>
+        
+        <!--<Row>
+          <Field Name="Title">LTI Meeting on Resource Management</Field>
+          <Field Name="EmployeeName">Ram</Field>
+          <Field Name="TripStart">2018-06-25</Field>
+          <Field Name="TripEnd">2018-06-29</Field>
+          <Field Name="TripType">General Meeting</Field>
+          <Field Name="TripDetails">Meeting</Field>
+          <Field Name="EstimatedBudget">45000</Field>
+          <Field Name="ApprovingManager">Rahul</Field>
+          <Field Name="TotalExpenses">42000</Field>
+          <Field Name="Notes">Meeting</Field>
+          <Field Name="TripStatus">Planned</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">LTI Meeting on Resource Management</Field>
+          <Field Name="EmployeeName">Ram</Field>
+          <Field Name="TripStart">2018-06-25</Field>
+          <Field Name="TripEnd">2018-06-29</Field>
+          <Field Name="TripType">General Meeting</Field>
+          <Field Name="TripDetails">Meeting</Field>
+          <Field Name="EstimatedBudget">45000</Field>
+          <Field Name="ApprovingManager">Rahul</Field>
+          <Field Name="TotalExpenses">42000</Field>
+          <Field Name="Notes">Meeting</Field>
+          <Field Name="TripStatus">Planned</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">LTI Meeting on Resource Management</Field>
+          <Field Name="EmployeeName">Ram</Field>
+          <Field Name="TripStart">2018-06-25</Field>
+          <Field Name="TripEnd">2018-06-29</Field>
+          <Field Name="TripType">General Meeting</Field>
+          <Field Name="TripDetails">Meeting</Field>
+          <Field Name="EstimatedBudget">45000</Field>
+          <Field Name="ApprovingManager">Rahul</Field>
+          <Field Name="TotalExpenses">42000</Field>
+          <Field Name="Notes">Meeting</Field>
+          <Field Name="TripStatus">Planned</Field>
+        </Row>-->
+      </Rows>
+    </Data>
+  </ListInstance>
 </Elements>

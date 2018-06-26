@@ -50,6 +50,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -57,14 +59,29 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPart.cs" />
+    <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx.cs">
+      <DependentUpon>ExpenseEntryWebPartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx.designer.cs">
+      <DependentUpon>ExpenseEntryWebPartUserControl.ascx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ExpenseEntryWebPart\ExpenseEntryWebPart.webpart" />
+    <None Include="ExpenseEntryWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8cfff422-2f97-4b68-879a-9f57958e9acc}</SharePointProjectItemId>
+    </None>
     <None Include="Expenses\ExpensesListInstance\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{f3222e62-0cf1-40dc-9af9-e228ab28edf0}</SharePointProjectItemId>
     </None>
     <None Include="Expenses\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a434c535-d0c1-4308-a2be-642db828502c}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{0b4f3079-5a80-4ff1-9625-cb8706f87017}</FeatureId>
     </None>
     <None Include="Features\LTIExpensesLists\LTIExpensesLists.feature">
       <FeatureId>{19849f0d-fa8e-49e5-a25b-3471066dc20c}</FeatureId>
@@ -84,9 +101,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ExpenseEntryWebPart\Elements.xml" />
+    <Content Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx" />
     <Content Include="Expenses\Elements.xml" />
     <Content Include="Expenses\ExpensesListInstance\Elements.xml" />
     <Content Include="Expenses\Schema.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
     <Content Include="Features\LTIExpensesLists\LTIExpensesLists.Template.xml">
       <DependentUpon>LTIExpensesLists.feature</DependentUpon>
     </Content>
