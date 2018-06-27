@@ -33,8 +33,7 @@
     <br />
     <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    <asp:Label ID="lblempname" runat="server" Text="Employee Name :" Font-Bold="True"></asp:Label>
-&nbsp;
+    <asp:Label ID="lblempname" runat="server" Text="Employee Name :" Font-Bold="True"></asp:Label>&nbsp;
 <asp:TextBox ID="txtename" runat="server" Width="305px" OnTextChanged="txtename_TextChanged" CausesValidation="True" placeholder="This field cannot be blank"></asp:TextBox>
 <asp:regularexpressionvalidator id="regular1" controltovalidate="txtename" runat="server" errormessage="Please enter a valid name!" validationexpression="^[a-zA-Z]*$" ForeColor="Red"></asp:regularexpressionvalidator>
 <p>
@@ -44,8 +43,7 @@
     <asp:TextBox ID="txttname" runat="server" Width="305px" OnTextChanged="txttname_TextChanged" CausesValidation="True"></asp:TextBox>
     <asp:RequiredFieldValidator runat="server" id="reqName" controltovalidate="txttname" errormessage="*" ForeColor="Red" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Label ID="lbltype" runat="server" Text="Trip Type :" Font-Bold="True"></asp:Label>
-    &nbsp;
+    <asp:Label ID="lbltype" runat="server" Text="Trip Type :" Font-Bold="True"></asp:Label> &nbsp;
     <asp:DropDownList ID="ddltype" runat="server" Width="125px">
         <asp:ListItem Value="0">General Meeting</asp:ListItem>
         <asp:ListItem Value="1">Service Visit</asp:ListItem>
@@ -55,20 +53,18 @@
     <asp:RequiredFieldValidator runat="server" id="reqtype" controltovalidate="ddltype" errormessage="*" ForeColor="Red" />
 </p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;<%--<p style="height: 42px">--%><asp:Label ID="lblstart" runat="server" Text="Trip Start :" Font-Bold="True"></asp:Label>
+&nbsp;<asp:Label ID="lblstart" runat="server" Text="Trip Start :" Font-Bold="True"></asp:Label>
     &nbsp;
         &nbsp;
-      
-<%--</p>--%>
+     
 &nbsp;<SharePoint:DateTimeControl ID="startdate" runat="server" DateOnly="True" />
 <p class="auto-style16">
     <asp:Label ID="errlbl" runat="server"></asp:Label>
     
 </p>
-<%--<asp:CompareValidator ID="compare" runat="server" ControlToValidate="txtstart" SetFocusOnError="true" ControlToCompare="txtend" ErrorMessage="End date must be greater than startdate" Operator="LessThan" ValidationGroup="vg" Type="Date" CultureInvariantValues="true"></asp:CompareValidator>--%>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <asp:Label ID="lblend" runat="server" Text="Trip End :" Font-Bold="True"></asp:Label>
-&nbsp;<SharePoint:DateTimeControl ID="enddate" runat="server" DateOnly="True" />
+    &nbsp;<SharePoint:DateTimeControl ID="enddate" runat="server" DateOnly="True" />
 
 <br />
 <br />
@@ -86,7 +82,7 @@
 &nbsp;<p>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Label ID="lbldetails" runat="server" Text="Trip Details :" Font-Bold="True"></asp:Label>
-    &nbsp;</p>
+ &nbsp;</p>
 <p>
     <asp:TextBox ID="txtdetails" runat="server" Height="101px" TextMode="MultiLine" Width="715px"></asp:TextBox>
 <p>
@@ -98,9 +94,7 @@
 <asp:RequiredFieldValidator runat="server" id="reqbudget" controltovalidate="txtestbudget" errormessage="*" ForeColor="Red" />
 <asp:regularexpressionvalidator id="Regularexpressionvalidator2" controltovalidate="txtestbudget" runat="server" errormessage="Invalid Budget!" validationexpression="\d+" ForeColor="Red"></asp:regularexpressionvalidator>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br />
 <br />
 <br />
@@ -143,7 +137,11 @@
 
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="auto-style17">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<p class="auto-style17">
     &nbsp;&nbsp;
     &nbsp;<asp:Label ID="lbltotexp" runat="server" Text="Total Expenses :" Font-Bold="True"></asp:Label>
     &nbsp;
@@ -153,7 +151,7 @@
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;
 <asp:Label ID="lblmgr" runat="server" Text="Approving Manager :" Font-Bold="True"></asp:Label>
-&nbsp; <asp:TextBox ID="txtmgr" runat="server" OnTextChanged="txtmgr_TextChanged"></asp:TextBox>
+    &nbsp; <asp:TextBox ID="txtmgr" runat="server" OnTextChanged="txtmgr_TextChanged"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <asp:Label ID="lblstatus" runat="server" Text="Approval Status :" Font-Bold="True"></asp:Label>
 &nbsp;&nbsp;&nbsp;
@@ -168,15 +166,14 @@
     <asp:Label ID="lblnotes" runat="server" Text="Notes :" Font-Bold="True"></asp:Label>
     &nbsp; </p>
 <p>
-    
     <asp:TextBox ID="txtnotes" runat="server" Height="102px" TextMode="MultiLine" Width="715px"></asp:TextBox>
-    
 <p>
     &nbsp;</p>
 
 <p class="auto-style3">
 &nbsp;&nbsp;<asp:Button ID="btnsubmit" runat="server" OnClick="btnsubmit_Click" Text="Submit" Font-Bold="True" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Button ID="btncancel" runat="server" OnClick="btncancel_Click" Text="Cancel" Font-Bold="True" />
 </p>
 </div>

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LTI.Expenses.ExpenseEntryWebPart {
-    
-    
-    public partial class ExpenseEntryWebPartUserControl {
-        
+namespace LTI.Expenses.ExpenseEntryWebPart
+{
+
+
+    public partial class ExpenseEntryWebPartUserControl
+    {
+
         /// <summary>
         /// lblhead control.
         /// </summary>
@@ -20,16 +22,16 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblhead;
-        
+
         /// <summary>
         /// lblempname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblempname;
-        
+
         /// <summary>
         /// txtename control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtename;
-        
+
         /// <summary>
         /// regular1 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regular1;
-        
+
         /// <summary>
         /// lbltname control.
         /// </summary>
@@ -56,16 +58,16 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbltname;
-        
+
         /// <summary>
         /// txttname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txttname;
-        
+
         /// <summary>
         /// reqName control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqName;
-        
+
         /// <summary>
         /// lbltype control.
         /// </summary>
@@ -83,16 +85,16 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbltype;
-        
+
         /// <summary>
         /// ddltype control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddltype;
-        
+
         /// <summary>
         /// reqtype control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqtype;
-        
+
         /// <summary>
         /// lblstart control.
         /// </summary>
@@ -110,25 +112,25 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblstart;
-        
+
         /// <summary>
         /// startdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::Microsoft.SharePoint.WebControls.DateTimeControl startdate;
-        
+
         /// <summary>
         /// errlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label errlbl;
-        
+
         /// <summary>
         /// lblend control.
         /// </summary>
@@ -137,16 +139,16 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblend;
-        
+
         /// <summary>
         /// enddate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::Microsoft.SharePoint.WebControls.DateTimeControl enddate;
-        
+
         /// <summary>
         /// lbltstatus control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbltstatus;
-        
+
         /// <summary>
         /// ddlstatus control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlstatus;
-        
+
         /// <summary>
         /// reqstatus control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqstatus;
-        
+
         /// <summary>
         /// lbldetails control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldetails;
-        
+
         /// <summary>
         /// txtdetails control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdetails;
-        
+
         /// <summary>
         /// lblestbudget control.
         /// </summary>
@@ -200,25 +202,25 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblestbudget;
-        
+
         /// <summary>
         /// txtestbudget control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtestbudget;
-        
+
         /// <summary>
         /// reqbudget control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqbudget;
-        
+
         /// <summary>
         /// Regularexpressionvalidator2 control.
         /// </summary>
@@ -227,7 +229,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator Regularexpressionvalidator2;
-        
+
         /// <summary>
         /// gvexp control.
         /// </summary>
@@ -236,7 +238,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvexp;
-        
+
         /// <summary>
         /// lbltotexp control.
         /// </summary>
@@ -245,43 +247,43 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbltotexp;
-        
+
         /// <summary>
         /// txttotexp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txttotexp;
-        
+
         /// <summary>
         /// lblmgr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblmgr;
-        
+
         /// <summary>
         /// txtmgr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtmgr;
-        
+
         /// <summary>
         /// lblstatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// To modify move field declaration from designer file to code- behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblstatus;
-        
+
         /// <summary>
         /// DropDownList1 control.
         /// </summary>
@@ -290,7 +292,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-        
+
         /// <summary>
         /// lblnotes control.
         /// </summary>
@@ -299,7 +301,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblnotes;
-        
+
         /// <summary>
         /// txtnotes control.
         /// </summary>
@@ -308,7 +310,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtnotes;
-        
+
         /// <summary>
         /// btnsubmit control.
         /// </summary>
@@ -317,7 +319,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnsubmit;
-        
+
         /// <summary>
         /// btncancel control.
         /// </summary>

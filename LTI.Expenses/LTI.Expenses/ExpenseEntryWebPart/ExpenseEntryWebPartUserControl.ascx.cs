@@ -31,7 +31,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart
             if (flag == 0)
                 txtmgr.Text = "Enter a valid user name";
         }
-       
+
         protected void txtename_TextChanged(object sender, EventArgs e)
         {
 
@@ -78,7 +78,7 @@ namespace LTI.Expenses.ExpenseEntryWebPart
                 Notes = this.txtnotes.Text
             });
 
-            if(added)
+            if (added)
             {
                 MessageBox.Show("Your entry was added successfully");
             }

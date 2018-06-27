@@ -3,12 +3,18 @@
   <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
     <metaData>
       <type name="LTI.Expenses.ExpenseEntryWebPart.ExpenseEntryWebPart, $SharePoint.Project.AssemblyFullName$" />
-      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+      <importErrorMessage>
+          $Resources:core,ImportErrorMessage;
+      </importErrorMessage>
     </metaData>
     <data>
       <properties>
-        <property name="Title" type="string">Expense Entry WebPart</property>
-        <property name="Description" type="string">Allows the employees to enter the Expenses of the Trips</property>
+        <property name="Title" type="string">
+          Expense Entry WebPart
+        </property>
+        <property name="Description" type="string">
+          Allows the employees to enter the Expenses of the Trips
+        </property>
       </properties>
     </data>
   </webPart>

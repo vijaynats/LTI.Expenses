@@ -63,9 +63,6 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\LTIExpensesLists\LTIExpensesLists.EventReceiver.cs">
-      <DependentUpon>LTIExpensesLists.feature</DependentUpon>
-    </Compile>
     <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPart.cs" />
     <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx.cs">
       <DependentUpon>ExpenseEntryWebPartUserControl.ascx</DependentUpon>
@@ -73,6 +70,9 @@
     </Compile>
     <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx.designer.cs">
       <DependentUpon>ExpenseEntryWebPartUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\LTIExpensesLists\LTIExpensesLists.EventReceiver.cs">
+      <DependentUpon>LTIExpensesLists.feature</DependentUpon>
     </Compile>
     <Compile Include="Model\Enums.cs" />
     <Compile Include="Model\Expense.cs" />
@@ -85,6 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ExpenseEntryWebPart\ExpenseEntryWebPart.webpart" />
+    <None Include="ExpenseEntryWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{182ed854-6915-4c9c-8e8c-bdc3117412e8}</SharePointProjectItemId>
+    </None>
     <None Include="Features\LTIExpensesWebParts\LTIExpensesWebParts.feature">
       <FeatureId>{f0f05de8-c63d-4bfd-9524-6663a91ab0bc}</FeatureId>
     </None>
