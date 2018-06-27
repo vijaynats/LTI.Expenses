@@ -42,6 +42,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SharePoint.DesignTime.Activities, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Activities" />
@@ -50,6 +51,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xaml" />
@@ -59,6 +63,9 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\LTIExpensesLists\LTIExpensesLists.EventReceiver.cs">
+      <DependentUpon>LTIExpensesLists.feature</DependentUpon>
+    </Compile>
     <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPart.cs" />
     <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx.cs">
       <DependentUpon>ExpenseEntryWebPartUserControl.ascx</DependentUpon>
@@ -70,18 +77,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ExpenseEntryWebPart\ExpenseEntryWebPart.webpart" />
-    <None Include="ExpenseEntryWebPart\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{8cfff422-2f97-4b68-879a-9f57958e9acc}</SharePointProjectItemId>
+    <None Include="Workflows\ExpensesWorkflow\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e45fe88d-e359-4851-8223-48c7613ae395}</SharePointProjectItemId>
     </None>
-    <None Include="Expenses\ExpensesListInstance\SharePointProjectItem.spdata">
+    <None Include="Lists\Expenses\ExpensesListInstance\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{f3222e62-0cf1-40dc-9af9-e228ab28edf0}</SharePointProjectItemId>
     </None>
-    <None Include="Expenses\SharePointProjectItem.spdata">
+    <None Include="Lists\Expenses\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a434c535-d0c1-4308-a2be-642db828502c}</SharePointProjectItemId>
     </None>
-    <None Include="Features\Feature1\Feature1.feature">
-      <FeatureId>{0b4f3079-5a80-4ff1-9625-cb8706f87017}</FeatureId>
+    <None Include="Features\LTIExpensesWorkflow\LTIExpensesWorkflow.feature">
+      <FeatureId>{9f54f398-55f3-4961-8cfc-548d695d67c2}</FeatureId>
     </None>
     <None Include="Features\LTIExpensesLists\LTIExpensesLists.feature">
       <FeatureId>{19849f0d-fa8e-49e5-a25b-3471066dc20c}</FeatureId>
@@ -93,30 +99,42 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="Trips\SharePointProjectItem.spdata">
+    <None Include="Lists\Trips\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{e17eef98-afa9-4366-abfa-8eb1dbb0378f}</SharePointProjectItemId>
     </None>
-    <None Include="Trips\TripsListInstance\SharePointProjectItem.spdata">
+    <None Include="Lists\Trips\TripsListInstance\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{398c2d15-ca5f-45aa-8932-73b510980661}</SharePointProjectItemId>
+    </None>
+    <None Include="Workflows\WorkflowHistoryList_1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{070354ee-57c4-4d54-9a61-e8eb578cba63}</SharePointProjectItemId>
+    </None>
+    <None Include="Workflows\WorkflowTaskList_1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c6cbd8eb-898a-444b-8d31-6ffc234286e2}</SharePointProjectItemId>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ExpenseEntryWebPart\Elements.xml" />
-    <Content Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx" />
-    <Content Include="Expenses\Elements.xml" />
-    <Content Include="Expenses\ExpensesListInstance\Elements.xml" />
-    <Content Include="Expenses\Schema.xml" />
-    <Content Include="Features\Feature1\Feature1.Template.xml">
-      <DependentUpon>Feature1.feature</DependentUpon>
+    <Content Include="Workflows\ExpensesWorkflow\Elements.xml" />
+    <Content Include="Lists\Expenses\Elements.xml" />
+    <Content Include="Lists\Expenses\ExpensesListInstance\Elements.xml" />
+    <Content Include="Lists\Expenses\Schema.xml" />
+    <Content Include="Features\LTIExpensesWorkflow\LTIExpensesWorkflow.Template.xml">
+      <DependentUpon>LTIExpensesWorkflow.feature</DependentUpon>
     </Content>
     <Content Include="Features\LTIExpensesLists\LTIExpensesLists.Template.xml">
       <DependentUpon>LTIExpensesLists.feature</DependentUpon>
     </Content>
-    <Content Include="Trips\Elements.xml" />
-    <Content Include="Trips\Schema.xml" />
-    <Content Include="Trips\TripsListInstance\Elements.xml" />
+    <Content Include="Lists\Trips\Elements.xml" />
+    <Content Include="Lists\Trips\Schema.xml" />
+    <Content Include="Lists\Trips\TripsListInstance\Elements.xml" />
+    <Content Include="Workflows\WorkflowHistoryList_1\Elements.xml" />
+    <Content Include="Workflows\WorkflowTaskList_1\Elements.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <XamlAppDef Include="Workflows\ExpensesWorkflow\Workflow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
