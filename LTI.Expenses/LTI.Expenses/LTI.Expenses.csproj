@@ -80,10 +80,14 @@
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Trip.cs" />
     <Compile Include="Model\Trips.cs" />
+    <Compile Include="MyTripsWebPart\MyTripsWebPart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ExpenseEntryWebPart\ExpenseEntryWebPart.webpart" />
+    <None Include="Features\LTIExpensesWebParts\LTIExpensesWebParts.feature">
+      <FeatureId>{f0f05de8-c63d-4bfd-9524-6663a91ab0bc}</FeatureId>
+    </None>
     <None Include="Lists\Expenses\ExpensesListInstance\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{f3222e62-0cf1-40dc-9af9-e228ab28edf0}</SharePointProjectItemId>
     </None>
@@ -97,6 +101,10 @@
       <FeatureId>{19849f0d-fa8e-49e5-a25b-3471066dc20c}</FeatureId>
     </None>
     <None Include="key.snk" />
+    <None Include="MyTripsWebPart\MyTripsWebPart.webpart" />
+    <None Include="MyTripsWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b5fbe82a-b530-4a9d-bcd8-532c5ddf23a7}</SharePointProjectItemId>
+    </None>
     <None Include="Package\Package.package">
       <PackageId>{87433c02-5631-4418-a675-4b91d523faa4}</PackageId>
     </None>
@@ -122,6 +130,9 @@
   <ItemGroup>
     <Content Include="ExpenseEntryWebPart\Elements.xml" />
     <Content Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx" />
+    <Content Include="Features\LTIExpensesWebParts\LTIExpensesWebParts.Template.xml">
+      <DependentUpon>LTIExpensesWebParts.feature</DependentUpon>
+    </Content>
     <Content Include="Lists\Expenses\Elements.xml" />
     <Content Include="Lists\Expenses\ExpensesListInstance\Elements.xml" />
     <Content Include="Lists\Expenses\Schema.xml" />
@@ -134,6 +145,7 @@
     <Content Include="Lists\Trips\Elements.xml" />
     <Content Include="Lists\Trips\Schema.xml" />
     <Content Include="Lists\Trips\TripsListInstance\Elements.xml" />
+    <Content Include="MyTripsWebPart\Elements.xml" />
     <Content Include="Workflows\ExpensesWorkflow\Elements.xml" />
     <Content Include="Workflows\WorkflowHistoryList_1\Elements.xml" />
     <Content Include="Workflows\WorkflowTaskList_1\Elements.xml" />
