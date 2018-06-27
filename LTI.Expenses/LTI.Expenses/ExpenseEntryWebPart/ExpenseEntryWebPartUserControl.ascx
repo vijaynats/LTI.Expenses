@@ -11,22 +11,12 @@
         margin-left: 233px;
         width: 300px;
     }
-    .auto-style4 {
-        height: 100px;
-        width: 715px;
-        margin-left: 20px;
-    }
     .auto-style16 {
         height: 21px;
     }
     .auto-style17 {
         margin-left: 471px;
         width: 279px;
-    }
-    .auto-style18 {
-        height: 100px;
-        width: 715px;
-        margin-left: 16px;
     }
     .auto-style19 {
         margin-left: 18px;
@@ -37,10 +27,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <br />
 &nbsp;&nbsp;&nbsp;
-    <center><h2 style="color:#181ce1">EXPENSE ENTRY FORM</h2></center>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Label ID="lblhead" runat="server" Text="EXPENSE ENTRY FORM" Font-Bold="True" Font-Size="X-Large"></asp:Label>
     <br />
     <br />
-
+    <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
     <asp:Label ID="lblempname" runat="server" Text="Employee Name :" Font-Bold="True"></asp:Label>
 &nbsp;
@@ -56,10 +47,10 @@
     <asp:Label ID="lbltype" runat="server" Text="Trip Type :" Font-Bold="True"></asp:Label>
     &nbsp;
     <asp:DropDownList ID="ddltype" runat="server" Width="125px">
-        <asp:ListItem>General Meeting</asp:ListItem>
-        <asp:ListItem>Service Visit</asp:ListItem>
-        <asp:ListItem>Sales Visit</asp:ListItem>
-        <asp:ListItem>Others</asp:ListItem>
+        <asp:ListItem Value="0">General Meeting</asp:ListItem>
+        <asp:ListItem Value="1">Service Visit</asp:ListItem>
+        <asp:ListItem Value="2">Sales Visit</asp:ListItem>
+        <asp:ListItem Value="3">Others</asp:ListItem>
     </asp:DropDownList>
     <asp:RequiredFieldValidator runat="server" id="reqtype" controltovalidate="ddltype" errormessage="*" ForeColor="Red" />
 </p>
@@ -87,9 +78,9 @@
 <asp:Label ID="lbltstatus" runat="server" Text="Trip Status :" Font-Bold="True"></asp:Label>
 &nbsp;
 <asp:DropDownList ID="ddlstatus" runat="server" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" Width="125px">
-    <asp:ListItem>Planned</asp:ListItem>
-    <asp:ListItem>In Progress</asp:ListItem>
-    <asp:ListItem>Completed</asp:ListItem>
+    <asp:ListItem Value="0">Planned</asp:ListItem>
+    <asp:ListItem Value="1">In Progress</asp:ListItem>
+    <asp:ListItem Value="2">Completed</asp:ListItem>
 </asp:DropDownList>
 <asp:RequiredFieldValidator runat="server" id="reqstatus" controltovalidate="ddlstatus" errormessage="*" ForeColor="Red" />
 &nbsp;<p>
@@ -97,7 +88,7 @@
     <asp:Label ID="lbldetails" runat="server" Text="Trip Details :" Font-Bold="True"></asp:Label>
     &nbsp;</p>
 <p>
-    <textarea id="txtdetails" name="S1" class="auto-style18"></textarea></p>
+    <asp:TextBox ID="txtdetails" runat="server" Height="101px" TextMode="MultiLine" Width="715px"></asp:TextBox>
 <p>
     &nbsp;</p>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -177,7 +168,9 @@
     <asp:Label ID="lblnotes" runat="server" Text="Notes :" Font-Bold="True"></asp:Label>
     &nbsp; </p>
 <p>
-    <textarea id="TextArea1" class="auto-style4" name="S2"></textarea></p>
+    
+    <asp:TextBox ID="txtnotes" runat="server" Height="102px" TextMode="MultiLine" Width="715px"></asp:TextBox>
+    
 <p>
     &nbsp;</p>
 

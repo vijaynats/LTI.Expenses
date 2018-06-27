@@ -7,8 +7,8 @@
     </metaData>
     <data>
       <properties>
-        <property name="Title" type="string">LTI.Expenses - ExpenseEntryWebPart</property>
-        <property name="Description" type="string">My Visual Web Part</property>
+        <property name="Title" type="string">Expense Entry WebPart</property>
+        <property name="Description" type="string">Allows the employees to enter the Expenses of the Trips</property>
       </properties>
     </data>
   </webPart>
