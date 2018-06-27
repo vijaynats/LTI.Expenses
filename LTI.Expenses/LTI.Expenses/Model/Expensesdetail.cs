@@ -25,8 +25,6 @@ namespace LTI.Expenses.Model
                 newItem["Narration"] = e.Narration;
                 newItem["Amount"] = e.Amount;
                 newItem["TripRef"] = t.TripName;
-
-
             }
             catch
             {

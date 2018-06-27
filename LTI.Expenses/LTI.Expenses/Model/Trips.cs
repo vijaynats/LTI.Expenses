@@ -8,9 +8,9 @@ using Microsoft.SharePoint;
 
 namespace LTI.Expenses.Model
 {
-    public class TripsMaster
+    public class Trips
     {
-        public TripsMaster()
+        public Trips()
         {
 
         }
@@ -37,7 +37,7 @@ namespace LTI.Expenses.Model
                     TripType = (TripTypes)Enum.Parse(typeof(TripTypes), trip["TripStatus"].ToString().Replace(" ", "")),
                     TripDetails = trip["TripDetails"].ToString(),
                     ExpenseTotal = double.Parse(trip["TotalExpenses"].ToString()),
-                    Notes = double.Parse(trip["Notes"].ToString()),
+                    Notes = trip["Notes"].ToString(),
                     Status = (TripStatuses)Enum.Parse(typeof(TripStatuses), trip["TripStatus"].ToString().Replace(" ", "")),
                     TripName = trip["TripName"].ToString(),
                     Expenses = new List<Expense>(),

@@ -2,7 +2,7 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
   <Module Name="ExpenseEntryWebPart" List="113" Url="_catalogs/wp">
     <File Path="ExpenseEntryWebPart\ExpenseEntryWebPart.webpart" Url="LTI.Expenses_ExpenseEntryWebPart.webpart" Type="GhostableInLibrary" >
-      <Property Name="Group" Value="LTI Expenses" />
+      <Property Name="Group" Value="Custom" />
     </File>
   </Module>
 </Elements>

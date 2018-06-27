@@ -13,6 +13,15 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
     public partial class ExpenseEntryWebPartUserControl {
         
         /// <summary>
+        /// lblhead control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblhead;
+        
+        /// <summary>
         /// lblempname control.
         /// </summary>
         /// <remarks>
@@ -175,6 +184,15 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         protected global::System.Web.UI.WebControls.Label lbldetails;
         
         /// <summary>
+        /// txtdetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtdetails;
+        
+        /// <summary>
         /// lblestbudget control.
         /// </summary>
         /// <remarks>
@@ -281,6 +299,15 @@ namespace LTI.Expenses.ExpenseEntryWebPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblnotes;
+        
+        /// <summary>
+        /// txtnotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtnotes;
         
         /// <summary>
         /// btnsubmit control.

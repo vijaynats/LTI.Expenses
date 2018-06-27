@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -7,6 +8,7 @@ using System.Web.UI.WebControls.WebParts;
 using Microsoft.SharePoint;
 using System.Collections.Generic;
 using System.Data;
+using LTI.Expenses.Model;
 
 namespace LTI.Expenses.ExpenseEntryWebPart
 {
@@ -52,8 +54,35 @@ namespace LTI.Expenses.ExpenseEntryWebPart
         }
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-            if (startdate.SelectedDate > enddate.SelectedDate)
-                errlbl.Text = "Enter valid dates";
+            // TBD - Do Validations
+            Trips t = new Trips();
+            bool added = t.AddNewTrip(new Trip()
+            {
+                Employee = new Person()
+                {
+                    DisplayName = this.txtename.Text
+                },
+                TripName = this.txttname.Text,
+                TripType = (TripTypes)int.Parse(this.ddltype.SelectedValue),
+                TripStart = this.startdate.SelectedDate.Date,
+                TripEnd = this.enddate.SelectedDate.Date,
+                Status = (TripStatuses)int.Parse(this.ddlstatus.SelectedValue),
+                TripDetails = this.txtdetails.Text,
+                Budget = double.Parse(this.txtestbudget.ToString()),
+                //grid
+                //dynamic sum
+                Approver = new Person()
+                {
+                    DisplayName = this.txtmgr.Text
+                },
+                Notes = this.txtnotes.Text
+            });
+
+            if(added)
+            {
+                MessageBox.Show("Your entry was added successfully");
+            }
+
         }
         protected void ButtonAdd_Click(object sender, EventArgs e)
         {

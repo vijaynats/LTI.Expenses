@@ -97,7 +97,7 @@ namespace LTI.Expenses.Model
         /// <summary>
         /// Additional Notes Regarding the trip
         /// </summary>
-        public double Notes
+        public string Notes
         {
             get; set;
         }
