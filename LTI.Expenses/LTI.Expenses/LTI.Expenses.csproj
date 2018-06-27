@@ -54,6 +54,8 @@
     <Reference Include="System.Workflow.Activities" />
     <Reference Include="System.Workflow.ComponentModel" />
     <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -70,6 +72,17 @@
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Trip.cs" />
     <Compile Include="Model\Trips.cs" />
+    <Compile Include="Features\LTIExpensesLists\LTIExpensesLists.EventReceiver.cs">
+      <DependentUpon>LTIExpensesLists.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPart.cs" />
+    <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx.cs">
+      <DependentUpon>ExpenseEntryWebPartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx.designer.cs">
+      <DependentUpon>ExpenseEntryWebPartUserControl.ascx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
