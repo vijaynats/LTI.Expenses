@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="LTI.Expenses.WebParts.MyTripsWebPart, $SharePoint.Project.AssemblyFullName$" />
+       </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">My Trips</property>
+        <property name="Description" type="string">Displays recent 10 trips of current user</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

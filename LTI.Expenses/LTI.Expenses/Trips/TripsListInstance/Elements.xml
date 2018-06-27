@@ -1,4 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <ListInstance Title="Trips" OnQuickLaunch="TRUE" TemplateType="10001" Url="Lists/Trips" Description="Trips"></ListInstance>
+  <ListInstance Title="Trips" OnQuickLaunch="TRUE" 
+                TemplateType="10001" 
+                Url="Lists/Trips" 
+                Description="Trips">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">LTI Meeting</Field>
+          <Field Name="EmployeeName">sid</Field>
+          <Field Name="TripStart">6/12/2018</Field>
+          <Field Name="TripEnd">10/12/2018</Field>
+          <Field Name="TripType">General Meeting</Field>
+          <Field Name="TripDetails">Meeting with client</Field>
+          <Field Name="EstimatedBudget">25000</Field>
+          <Field Name="ApprovingManager">geetha</Field>
+          <Field Name="TotalExpenses">35000</Field>
+          <Field Name="Notes">meeting happens in mumbai</Field>
+          <Field Name="TripStatus">Planned</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+
 </Elements>

@@ -42,6 +42,10 @@
   <ItemGroup>
     <Reference Include="Microsoft.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SharePoint.DesignTime.Activities, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Linq, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Activities" />
@@ -50,6 +54,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -58,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MyTripsWebPart\MyTripsWebPart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Expenses\ExpensesListInstance\SharePointProjectItem.spdata">
@@ -65,6 +71,9 @@
     </None>
     <None Include="Expenses\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a434c535-d0c1-4308-a2be-642db828502c}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\LTIExpensesWebParts\LTIExpensesWebParts.feature">
+      <FeatureId>{98b542a0-9373-4ef6-ad32-5022f737c61f}</FeatureId>
     </None>
     <None Include="Features\LTIExpensesLists\LTIExpensesLists.feature">
       <FeatureId>{19849f0d-fa8e-49e5-a25b-3471066dc20c}</FeatureId>
@@ -76,6 +85,12 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
+    <None Include="MyTripsWebPart\MyTripsWebPart.webpart">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyTripsWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{65d02a2a-8ca4-4f17-9d64-9f5ecfdc5582}</SharePointProjectItemId>
+    </None>
     <None Include="Trips\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{e17eef98-afa9-4366-abfa-8eb1dbb0378f}</SharePointProjectItemId>
     </None>
@@ -84,15 +99,25 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Expenses\Elements.xml" />
+    <Content Include="Expenses\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Expenses\ExpensesListInstance\Elements.xml" />
     <Content Include="Expenses\Schema.xml" />
+    <Content Include="Features\LTIExpensesWebParts\LTIExpensesWebParts.Template.xml">
+      <DependentUpon>LTIExpensesWebParts.feature</DependentUpon>
+    </Content>
     <Content Include="Features\LTIExpensesLists\LTIExpensesLists.Template.xml">
       <DependentUpon>LTIExpensesLists.feature</DependentUpon>
     </Content>
+    <Content Include="MyTripsWebPart\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Trips\Elements.xml" />
     <Content Include="Trips\Schema.xml" />
-    <Content Include="Trips\TripsListInstance\Elements.xml" />
+    <Content Include="Trips\TripsListInstance\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
