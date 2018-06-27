@@ -6,7 +6,7 @@
     <ProjectGuid>{FF30DC79-B2FB-47A4-9F38-DC56E7D5E151}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LTI.Expenses</RootNamespace>
+    <RootNamespace>LTI.Expenses.WebParts</RootNamespace>
     <AssemblyName>LTI.Expenses</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetOfficeVersion>15.0</TargetOfficeVersion>
@@ -42,6 +42,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SharePoint.DesignTime.Activities, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SharePoint.Linq, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Linq.dll</HintPath>
@@ -54,6 +55,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
@@ -62,15 +66,27 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Enums.cs" />
+    <Compile Include="Model\Expense.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Trip.cs" />
+    <Compile Include="Features\LTIExpensesLists\LTIExpensesLists.EventReceiver.cs">
+      <DependentUpon>LTIExpensesLists.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TripsMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MyTripsWebPart\MyTripsWebPart.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Expenses\ExpensesListInstance\SharePointProjectItem.spdata">
+    <None Include="bin\Debug\LTI.Expenses.wsp" />
+    <None Include="Lists\Expenses\ExpensesListInstance\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{f3222e62-0cf1-40dc-9af9-e228ab28edf0}</SharePointProjectItemId>
     </None>
-    <None Include="Expenses\SharePointProjectItem.spdata">
+    <None Include="Lists\Expenses\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a434c535-d0c1-4308-a2be-642db828502c}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\LTIExpensesWorkflow\LTIExpensesWorkflow.feature">
+      <FeatureId>{9f54f398-55f3-4961-8cfc-548d695d67c2}</FeatureId>
     </None>
     <None Include="Features\LTIExpensesWebParts\LTIExpensesWebParts.feature">
       <FeatureId>{98b542a0-9373-4ef6-ad32-5022f737c61f}</FeatureId>
@@ -79,6 +95,12 @@
       <FeatureId>{19849f0d-fa8e-49e5-a25b-3471066dc20c}</FeatureId>
     </None>
     <None Include="key.snk" />
+    <None Include="Lists\Trips\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4659dd6e-18ac-402a-8426-832bedf0bfa1}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Trips\TripsListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c03a9ca7-f497-4c8a-8dbe-02b288981ae8}</SharePointProjectItemId>
+    </None>
     <None Include="Package\Package.package">
       <PackageId>{87433c02-5631-4418-a675-4b91d523faa4}</PackageId>
     </None>
@@ -91,35 +113,117 @@
     <None Include="MyTripsWebPart\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{65d02a2a-8ca4-4f17-9d64-9f5ecfdc5582}</SharePointProjectItemId>
     </None>
-    <None Include="Trips\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{e17eef98-afa9-4366-abfa-8eb1dbb0378f}</SharePointProjectItemId>
-    </None>
-    <None Include="Trips\TripsListInstance\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{398c2d15-ca5f-45aa-8932-73b510980661}</SharePointProjectItemId>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Expenses\Elements.xml">
-      <SubType>Designer</SubType>
+    <Content Include="bin\Debug\de\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\Debug\de\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\Debug\de\System.Spatial.resources.dll" />
+    <Content Include="bin\Debug\es\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\Debug\es\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\Debug\es\System.Spatial.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\Debug\fr\System.Spatial.resources.dll" />
+    <Content Include="bin\Debug\it\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\Debug\it\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\Debug\it\System.Spatial.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\Debug\ja\System.Spatial.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\Debug\ko\System.Spatial.resources.dll" />
+    <Content Include="bin\Debug\LTI.Expenses.dll" />
+    <Content Include="bin\Debug\LTI.Expenses.pdb" />
+    <Content Include="bin\Debug\Microsoft.Activities.dll" />
+    <Content Include="bin\Debug\Microsoft.Activities.xml" />
+    <Content Include="bin\Debug\Microsoft.AnalysisServices.AdomdClient.dll" />
+    <Content Include="bin\Debug\Microsoft.BusinessData.dll" />
+    <Content Include="bin\Debug\Microsoft.BusinessData.xml" />
+    <Content Include="bin\Debug\Microsoft.Data.Edm.dll" />
+    <Content Include="bin\Debug\Microsoft.Data.Edm.xml" />
+    <Content Include="bin\Debug\Microsoft.Data.OData.dll" />
+    <Content Include="bin\Debug\Microsoft.Data.OData.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Extensions.dll" />
+    <Content Include="bin\Debug\Microsoft.mshtml.dll" />
+    <Content Include="bin\Debug\Microsoft.Office.DocumentManagement.dll" />
+    <Content Include="bin\Debug\Microsoft.Office.DocumentManagement.xml" />
+    <Content Include="bin\Debug\Microsoft.Office.Excel.Server.Udf.dll" />
+    <Content Include="bin\Debug\Microsoft.Office.Excel.Server.WebServices.dll" />
+    <Content Include="bin\Debug\Microsoft.Office.SecureStoreService.Server.Security.dll" />
+    <Content Include="bin\Debug\Microsoft.Office.Server.dll" />
+    <Content Include="bin\Debug\Microsoft.Office.Server.Search.Applications.dll" />
+    <Content Include="bin\Debug\Microsoft.Office.Server.Search.Connector.dll" />
+    <Content Include="bin\Debug\Microsoft.Office.Server.Search.Connector.xml" />
+    <Content Include="bin\Debug\Microsoft.Office.Server.Search.dll" />
+    <Content Include="bin\Debug\Microsoft.Office.Server.Search.xml" />
+    <Content Include="bin\Debug\Microsoft.Office.Server.UserProfiles.dll" />
+    <Content Include="bin\Debug\Microsoft.Office.Server.UserProfiles.xml" />
+    <Content Include="bin\Debug\Microsoft.Office.Server.xml" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.Runtime.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.Runtime.xml" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.ServerRuntime.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.UserProfiles.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.xml" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.DesignTime.Activities.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Linq.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Linq.xml" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Portal.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Portal.xml" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Publishing.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Publishing.xml" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Search.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Search.Extended.Administration.Common.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Search.Extended.Administration.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Search.Extended.Administration.ResourceStorage.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Search.xml" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Security.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Security.xml" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Taxonomy.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Taxonomy.xml" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.WorkflowActions.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.WorkflowActions.xml" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.xml" />
+    <Content Include="bin\Debug\Microsoft.Web.Administration.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.CommandUI.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\Debug\ru\System.Spatial.resources.dll" />
+    <Content Include="bin\Debug\System.Spatial.dll" />
+    <Content Include="bin\Debug\System.Spatial.xml" />
+    <Content Include="bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\Debug\zh-Hans\System.Spatial.resources.dll" />
+    <Content Include="bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\Debug\zh-Hant\System.Spatial.resources.dll" />
+    <Content Include="Lists\Expenses\Elements.xml" />
+    <Content Include="Lists\Expenses\ExpensesListInstance\Elements.xml" />
+    <Content Include="Lists\Expenses\Schema.xml" />
+    <Content Include="Features\LTIExpensesWorkflow\LTIExpensesWorkflow.Template.xml">
+      <DependentUpon>LTIExpensesWorkflow.feature</DependentUpon>
     </Content>
-    <Content Include="Expenses\ExpensesListInstance\Elements.xml" />
-    <Content Include="Expenses\Schema.xml" />
     <Content Include="Features\LTIExpensesWebParts\LTIExpensesWebParts.Template.xml">
       <DependentUpon>LTIExpensesWebParts.feature</DependentUpon>
     </Content>
     <Content Include="Features\LTIExpensesLists\LTIExpensesLists.Template.xml">
       <DependentUpon>LTIExpensesLists.feature</DependentUpon>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lists\Trips\Elements.xml" />
+    <Content Include="Lists\Trips\Schema.xml" />
+    <Content Include="Lists\Trips\TripsListInstance\Elements.xml" />
     <Content Include="MyTripsWebPart\Elements.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Trips\Elements.xml" />
-    <Content Include="Trips\Schema.xml" />
-    <Content Include="Trips\TripsListInstance\Elements.xml">
-      <SubType>Designer</SubType>
-    </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\Debug\PartitionedWorkflowBuild\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
