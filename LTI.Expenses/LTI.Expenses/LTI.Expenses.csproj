@@ -66,6 +66,15 @@
     <Compile Include="Features\LTIExpensesLists\LTIExpensesLists.EventReceiver.cs">
       <DependentUpon>LTIExpensesLists.feature</DependentUpon>
     </Compile>
+    <Compile Include="Model\Enums.cs" />
+    <Compile Include="Model\Expense.cs" />
+    <Compile Include="Model\Expensesdetail.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Trip.cs" />
+    <Compile Include="Model\Trips.cs" />
+    <Compile Include="Features\LTIExpensesLists\LTIExpensesLists.EventReceiver.cs">
+      <DependentUpon>LTIExpensesLists.feature</DependentUpon>
+    </Compile>
     <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPart.cs" />
     <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx.cs">
       <DependentUpon>ExpenseEntryWebPartUserControl.ascx</DependentUpon>
