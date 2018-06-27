@@ -7,17 +7,18 @@ using Microsoft.SharePoint.Client;
 using System.Net;
 using System.IO;
 
-namespace CSV
+
+namespace CSVFile
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Importing Trips data...");
-            ClientContext ctx = new ClientContext("http://expenses.trg3.int");
+            Console.WriteLine("Importing Sales data...");
+            ClientContext ctx = new ClientContext("http://intranet.trg3.int");
 
             //read csv file (comma separated values file)
-            using (var reader = new StreamReader(@"C:\TripsCSV.csv"))
+            using (var reader = new StreamReader(@"C:\SalesRecord.csv"))
             {
                 int count = 0;
                 while (!reader.EndOfStream)
@@ -27,21 +28,14 @@ namespace CSV
 
                     //create sp list item
                     ListItemCreationInformation iteminfo = new ListItemCreationInformation();
-                    ListItem newItem = ctx.Web.Lists.GetByTitle("Trips").AddItem(iteminfo);
+                    ListItem newItem = ctx.Web.Lists.GetByTitle("Sales").AddItem(iteminfo);
                     newItem["Title"] = cols[0];
-                    newItem["EmployeeName"] = cols[1];
-                    newItem["TripStart"] = cols[2];
-                    newItem["TripEnd"] = cols[3];
-                    newItem["TripType"] = cols[4];
-                    newItem["TripDetails"] = cols[5];
-                    newItem["EstimatedBudget"] = cols[6];
-                    newItem["ApprovingManager"] = cols[7];
-                    newItem["TotalExpenses"] = cols[8];
-                    newItem["Notes1"] = cols[9];
-                    newItem["TripStatus"] = cols[10];
+                    newItem["Country"] = cols[1];
+                    newItem["Product"] = cols[2];
+                    newItem["Code"] = cols[3];
+                    newItem["Amount"] = Double.Parse(cols[4]);
 
                     newItem.Update();
-                    ctx.ExecuteQuery();
                     ctx.Load(newItem);
                     ctx.ExecuteQuery();
                     count++;
@@ -52,4 +46,5 @@ namespace CSV
         }
     }
 }
+    
 
