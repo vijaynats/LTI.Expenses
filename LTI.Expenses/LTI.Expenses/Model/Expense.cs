@@ -8,12 +8,17 @@ namespace LTI.Expenses.Model
 {
    public class Expense
     {
+        public int ID
+        {
+            get;
+            set;
+        }
         public DateTime Date
         {
             get;set;
         }
 
-        public ExpenseTypes TyoeOfExpense
+        public ExpenseTypes TypeOfExpense
         {
             get;set;
         }

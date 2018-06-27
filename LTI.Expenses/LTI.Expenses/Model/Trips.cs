@@ -25,7 +25,7 @@ namespace LTI.Expenses.Model
         {
             var trip = SPContext.Current.Site.RootWeb.Lists["Trips"].GetItemById(id);
 
-            if(trip!=null)
+            if (trip != null)
             {
 
                 return new Trip()
@@ -43,9 +43,9 @@ namespace LTI.Expenses.Model
                     Expenses = new List<Expense>(),
                     Employee = new Person()
                     {
-                         LoginName = "TRG6\\kavins",
-                         DisplayName="kavins",
-                         Email= "kavins@trg6.int"
+                        LoginName = "TRG6\\kavins",
+                        DisplayName = "kavins",
+                        Email = "kavins@trg6.int"
                     },
                     Approver = new Person()
                     {
@@ -54,14 +54,97 @@ namespace LTI.Expenses.Model
                         Email = "admin@trg6.int"
                     }
                 };
-            }   
+            }
 
-            return trip;                   
-           
+            else
+            {
+                return null;
+            }
         }
 
-        
-      
+
+
+        public bool AddNewTrip(Trip t)
+        {
+            try
+            {
+                SPList list = SPContext.Current.Web.Lists["Trips"];
+                SPListItem newItem = list.Items.Add();
+                newItem["TripName"] = t.TripName;
+                newItem["EmployeeName"] = t.Employee;
+                newItem["TripStart"] = t.TripStart;
+                newItem["TripEnd"] = t.TripEnd;
+                newItem["TripType"] = t.TripType;
+                newItem["TripDetails"] = t.TripDetails;
+                newItem["EstimatedBudget"] = t.Budget;
+                newItem["ApprovingManager"] = t.Approver;
+                newItem["TotalExpenses"] = t.ExpenseTotal;
+                newItem["Notes"] = t.Notes;
+                newItem["TripStatus"] = t.Status;
+                newItem.Update();
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+
+
+
+        public bool UpdateTrip(Trip t)
+        {
+            SPList list = SPContext.Current.Web.Lists["Trips"];
+
+            SPListItem uItem = list.GetItemById(t.ID);
+            try
+            {
+                uItem["TripName"] = t.TripName;
+                uItem["EmployeeName"] = t.Employee;
+                uItem["TripStart"] = t.TripStart;
+                uItem["TripEnd"] = t.TripEnd;
+                uItem["TripType"] = t.TripType;
+                uItem["TripDetails"] = t.TripDetails;
+                uItem["EstimatedBudget"] = t.Budget;
+                uItem["ApprovingManager"] = t.Approver;
+                uItem["TotalExpenses"] = t.ExpenseTotal;
+                uItem["Notes"] = t.Notes;
+                uItem["TripStatus"] = t.Status;
+                uItem.Update();
+
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+
+        public bool DeleteTripById(int id)
+        {
+            try
+            {
+                SPList list = SPContext.Current.Web.Lists["Trips"];
+                SPListItem item = list.GetItemById(id);
+                item.Delete();
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
+        public void deleteTrip(Trip t)
+        {
+
+            this.DeleteTripById(t.ID);
+        }
 
     }
 }
+
