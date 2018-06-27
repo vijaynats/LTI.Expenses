@@ -56,7 +56,10 @@ namespace LTI.Expenses.Model
                 };
             }   
 
-            return trip;                   
+            else
+            {
+                return null;
+            }
            
         }
 

@@ -10,7 +10,7 @@ namespace LTI.Expenses.Model
 {
    public  class btnfunc
     { 
-        public void button(Trip t,Expense e)
+        public void button(Trip tr,Expense ex)
         { try
             { using (SPSite site = new SPSite(SPContext.Current.Web.Url))
                using (SPWeb web = site.OpenWeb())

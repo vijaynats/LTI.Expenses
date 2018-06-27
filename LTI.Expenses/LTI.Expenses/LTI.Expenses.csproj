@@ -63,12 +63,6 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\btnfunc.cs" />
-    <Compile Include="Model\Enums.cs" />
-    <Compile Include="Model\Expense.cs" />
-    <Compile Include="Model\Person.cs" />
-    <Compile Include="Model\Trip.cs" />
-    <Compile Include="Model\Trips.cs" />
     <Compile Include="Features\LTIExpensesLists\LTIExpensesLists.EventReceiver.cs">
       <DependentUpon>LTIExpensesLists.feature</DependentUpon>
     </Compile>
@@ -80,9 +74,16 @@
     <Compile Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx.designer.cs">
       <DependentUpon>ExpenseEntryWebPartUserControl.ascx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\btnfunc.cs" />
+    <Compile Include="Model\Enums.cs" />
+    <Compile Include="Model\Expense.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Trip.cs" />
+    <Compile Include="Model\Trips.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ExpenseEntryWebPart\ExpenseEntryWebPart.webpart" />
     <None Include="Workflows\ExpensesWorkflow\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{e45fe88d-e359-4851-8223-48c7613ae395}</SharePointProjectItemId>
     </None>
@@ -119,6 +120,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ExpenseEntryWebPart\Elements.xml" />
+    <Content Include="ExpenseEntryWebPart\ExpenseEntryWebPartUserControl.ascx" />
     <Content Include="Workflows\ExpensesWorkflow\Elements.xml" />
     <Content Include="Lists\Expenses\Elements.xml" />
     <Content Include="Lists\Expenses\ExpensesListInstance\Elements.xml" />
